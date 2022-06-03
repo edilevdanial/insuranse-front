@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="left">
+    <div class="flex items-center">
       <h3 class="header-title text-weight-bold">
         SlnSave
       </h3>
@@ -22,10 +22,12 @@
       </nav>
     </div>
     <div class="right">
-      <a href="#" class="nav-link text-weight-medium">
+      <a href="#" class="nav-link text-weight-medium q-mr-xl">
         Login
       </a>
-      <q-btn icon-right=""></q-btn>
+      <q-btn color="primary">Become a member
+        <base-icon class="ic-12 q-ml-md">arrow</base-icon>
+      </q-btn>
     </div>
 
 
@@ -33,8 +35,10 @@
 </template>
 
 <script>
+import BaseIcon from "./Base/BaseIcon";
 export default {
   name: "Header",
+  components: {BaseIcon},
   data(){}
 }
 </script>
@@ -43,9 +47,7 @@ export default {
   .header{
     display: flex;
     padding-top: 30px;
-  }
-  .left{
-    display: flex;
+    justify-content: space-between;
   }
   .header-title{
     font-size: 24px;
@@ -71,8 +73,9 @@ export default {
   }
   .nav{
     display: flex;
-    margin: 7px 0 0 76px;
-
+    margin: 0 0 0 76px;
+    align-items: center;
   }
+
 
 </style>
