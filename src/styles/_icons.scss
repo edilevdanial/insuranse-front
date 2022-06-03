@@ -1,0 +1,46 @@
+// Icons
+.ic {
+  cursor: pointer;
+  // Sizes
+  @for $size from 1 through 200 {
+    &-#{$size} {
+      width: #{$size}px;
+      height: #{$size}px;
+
+      min-width: #{$size}px;
+    }
+  }
+
+  // Colors
+  &-white { fill: #FFF !important; }
+  &-gray {fill: #71757A; }
+  &-gray--lighten { fill: #9b9b9b;}
+  &-black { fill: #000 !important; }
+  &-primary { fill: var(--color-primary) !important; }
+  //&-blue { fill: var(--color-blue) !important; }
+  //&-green { fill: var(--color-success) !important; }
+  //&-red { fill: var(--color-danger) !important; }
+  //&-yellow { fill: var(--color-warning) !important; }
+  // &-primary { fill: $primary; }
+  // &-blue { fill: $blue; }
+  // &-green { fill: $green; }
+  // &-red { fill: $red; }
+  // &-yellow { fill: $yellow; }
+
+  //Stroke colors
+  &-stroke {
+    &--gray { stroke: gray }
+    &--black { stroke: black }
+    &--red { stroke: red}
+    &--primary { stroke: var(--color-primary) !important; }
+  }
+
+  // fills
+  &-fill {
+    &--connection-gray { fill: #9DA3AC}
+    &--gray { fill: gray }
+    &--black { fill: black }
+    &--primary { fill: var(--color-primary) !important; }
+  }
+
+}
