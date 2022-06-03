@@ -25,16 +25,16 @@
 
     <div class="flex cards justify-around items-start">
       <template v-for="spons in sponsor" class="items-start">
-        <Sponsor :key="spons" :icon="spons.icon"/>
+        <Sponsor :key="spons.icon" :icon="spons.icon"/>
       </template>
     </div>
 
     <div class="flex justify-around q-pl-md q-pr-md cards">
       <h3 class="text-weight-bold" style="line-height: 32px; margin: 0">Subscribe For Latest<br>
         Newsletter</h3>
-      <div class="flex" style="width: 450px">
-        <q-input outlined v-model="text" label="text" aria-placeholder="Your Email" />
-        <div style="height: 56px;">Subscribe</div>
+      <div class="row">
+        <q-input style="width: 300px" outlined v-model="text" label="text" aria-placeholder="Your Email" />
+        <div class="subscribe" style="height: 56px;">Subscribe</div>
       </div>
     </div>
 
@@ -120,6 +120,27 @@ export default {
     .cards{
       margin-top: 200px;
       gap: 30px;
+      .subscribe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 22px;
+        box-sizing: border-box;
+        background: #23A6F0;
+        border: 1px solid #E6E6E6;
+        border-radius: 0px 5px 5px 0px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        /* identical to box height, or 200% */
+
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        /* light-text-color */
+
+        color: #FFFFFF;
+      }
     }
   }
   .container{

@@ -38,8 +38,7 @@
 import BaseIcon from "./Base/BaseIcon";
 export default {
   name: "Header",
-  components: {BaseIcon},
-  data(){}
+  components: {BaseIcon}
 }
 </script>
 
