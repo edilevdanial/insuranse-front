@@ -9,17 +9,14 @@
       <div class="flex justify-center">
         <q-btn flat no-caps label="Forgot your password?" text-color="purple"></q-btn>
       </div>
-      <UserCard text="hello" title="hello"></UserCard>
     </q-card>
     <q-btn label="Don't have an account ?" flat no-caps><span class="text-accent"> Sign up</span></q-btn>
   </div>
 </template>
 
 <script>
-import UserCard from "@/components/UserCard";
 export default {
   name: "login",
-  components: {UserCard}
 }
 </script>
 
