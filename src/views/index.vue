@@ -1,10 +1,14 @@
 <template>
-<div><h3>hello world</h3></div>
+  <div>
+    <MainBlock/>
+  </div>
 </template>
 
 <script>
+import MainBlock from "../components/MainBlock";
 export default {
-  name: "index"
+  name: "index",
+  components: {MainBlock}
 }
 </script>
 
