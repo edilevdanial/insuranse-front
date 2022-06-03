@@ -1,32 +1,16 @@
 <template>
-  <div class="flex justify-between">
-    <template v-for="card in cards">
-      <UserCard :key="card.title" :title="card.title" :text="card.text"></UserCard>
-    </template>
+  <div>
+    <MainBlock/>
   </div>
 </template>
 
 <script>
-import UserCard from "@/components/UserCard";
+import MainBlock from "../components/MainBlock";
 
 export default {
   name: "index",
-  components: {UserCard},
+  components: {MainBlock},
   data: () => ({
-    cards: [
-      {
-        title: 'Peace of Mind',
-        text: 'the quick fox jumps over the lazy dog'
-      },
-      {
-        title: 'Set For Life',
-        text: 'the quick fox jumps over the lazy dog'
-      },
-      {
-        title: '100% Satisfaction',
-        text: 'the quick fox jumps over the lazy dog'
-      }
-    ]
   })
 }
 </script>

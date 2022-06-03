@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-page-container>
+    <q-page-container class="container">
       <q-page>
         <router-view></router-view>
       </q-page>
@@ -24,5 +24,5 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>
