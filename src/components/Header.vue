@@ -22,9 +22,9 @@
       </nav>
     </div>
     <div class="right">
-      <a href="#" class="nav-link text-weight-medium q-mr-xl">
+      <router-link to="/auth/login"  class="nav-link text-weight-medium q-mr-xl">
         Login
-      </a>
+      </router-link>
       <q-btn color="primary">Become a member
         <base-icon class="ic-12 q-ml-md">arrow</base-icon>
       </q-btn>

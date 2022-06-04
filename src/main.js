@@ -3,7 +3,8 @@ import App from './App.vue'
 import router from './router/index'
 import store from './store/index'
 import './quasar'
-import axios from 'axios'
+import axios from 'axios';
+
 
 Vue.config.productionTip = false
 
@@ -13,7 +14,7 @@ const config = {
   }
 }
 
-Vue.prototype.$http = axios.create(config)
+Vue.prototype.$axios = axios.create(config)
 
 new Vue({
   render: h => h(App),

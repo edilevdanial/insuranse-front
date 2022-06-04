@@ -11,7 +11,7 @@
                outlined/>
       <q-btn @click="register" color="purple" label="Continue" size="lg" class="q-mb-mb full-width"></q-btn>
     </q-card>
-    <q-btn label="Have an account ?" flat no-caps><span class="text-accent"> Sign in</span></q-btn>
+    <q-btn to="login" label="Have an account ?" flat no-caps><span class="text-accent"> Sign in</span></q-btn>
   </div>
 </template>
 
