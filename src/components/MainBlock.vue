@@ -67,16 +67,7 @@
         </div>
       </div>
 
-      <div class="book flex row justify-center items-center">
-        <div class="lef col-4">
-          <img src="../../src/assets/images/media.png" style="width: 100%">
-        </div>
-        <div class="right col-8">
-
-        </div>
-      </div>
-
-
+      <Book/>
     </div>
 
   </div>
@@ -88,9 +79,10 @@ import UserCard from "./UserCard";
 import QueCard from "./QueCard";
 import Sponsor from "./Sponsor";
 import Prising from "./Prising";
+import Book from "./Book";
 export default {
   name: "MainBlock",
-  components: {Header, UserCard, QueCard, Sponsor, Prising},
+  components: {Book, Header, UserCard, QueCard, Sponsor, Prising},
   data(){
     return{
       cards: [
@@ -204,11 +196,6 @@ export default {
     }
     .icons{
       padding: 0 200px 50px 200px;
-    }
-    .book{
-      //padding: 0 200px 50px 200px;
-      background: white;
-      width: 877px;
     }
     .pricing{
       gap: 30px;
