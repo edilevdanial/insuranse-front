@@ -15,9 +15,8 @@ const config = {
 }
 if (token) {
     config.headers.Authorization = `Bearer ${token}`
+    axios.defaults.headers.common = {'Authorization': `Bearer ${token}`}
 }
-
-axios.
 Vue.prototype.$axios = axios.create(config)
 
 new Vue({

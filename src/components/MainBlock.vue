@@ -1,21 +1,27 @@
 <template>
   <div class="main-block">
-    <Header/>
-    <div class="flex column items-center justify-center container">
-      <p class="text-white text-h2 text-weight-bold" style="line-height: 80px">We Ensure A Best <br> Insurance Service</p>
-      <p class="text-white text-h6 text-weight-medium text-center">We know how large objects will act, but things on a <br>
-        small scale just do not act that way.</p>
-      <div class="q-mt-md">
-        <q-btn color="primary" rounded no-caps class="text-weight-bold text-caption q-pa-sm q-mr-md">Get Quote Now</q-btn>
-        <q-btn outline rounded no-caps class="text-weight-bold text-caption q-pa-sm text-white" style="color: white">Learn More</q-btn>
+
+    <div class="first">
+      <Header/>
+      <div class="flex column items-center justify-center container">
+        <p class="text-white text-h2 text-weight-bold" style="line-height: 80px">We Ensure A Best <br> Insurance Service</p>
+        <p class="text-white text-h6 text-weight-medium text-center">We know how large objects will act, but things on a <br>
+          small scale just do not act that way.</p>
+        <div class="q-mt-md">
+          <q-btn color="primary" rounded no-caps class="text-weight-bold text-caption q-pa-sm q-mr-md">Get Quote Now</q-btn>
+          <q-btn outline rounded no-caps class="text-weight-bold text-caption q-pa-sm text-white" style="color: white">Learn More</q-btn>
+        </div>
       </div>
+
+      <div class="flex cards justify-center">
+        <template v-for="card in cards">
+          <UserCard :key="card.title" :title="card.title" :text="card.text"></UserCard>
+        </template>
+      </div>
+
+
     </div>
 
-    <div class="flex cards justify-center">
-      <template v-for="card in cards">
-        <UserCard :key="card.title" :title="card.title" :text="card.text"></UserCard>
-      </template>
-    </div>
 
     <div class="flex cards justify-center">
       <template v-for="item in items">
@@ -23,19 +29,54 @@
       </template>
     </div>
 
-    <div class="flex cards justify-around items-start">
+    <div class="flex justify-around items-start icons q-mt-xl">
       <template v-for="spons in sponsor" class="items-start">
         <Sponsor :key="spons.icon" :icon="spons.icon"/>
       </template>
     </div>
 
-    <div class="flex justify-around q-pl-md q-pr-md cards">
-      <h3 class="text-weight-bold" style="line-height: 32px; margin: 0">Subscribe For Latest<br>
-        Newsletter</h3>
+    <div class="flex justify-around q-pl-md q-pr-md q-mt-xl gradient">
+      <h4 class="text-weight-bold text-white" style="line-height: 32px; margin: 0">Subscribe For Latest<br>
+        Newsletter</h4>
       <div class="row">
-        <q-input style="width: 300px" outlined v-model="text" label="text" aria-placeholder="Your Email" />
+        <q-input style="width: 300px" outlined v-model="text" label="Your Email" class="text-white" aria-placeholder="Your Email" />
         <div class="subscribe" style="height: 56px;">Subscribe</div>
       </div>
+    </div>
+
+    <div class="flex justify-center q-mt-xl items-center pricing">
+      <template v-for="price in prising" class="q-pa-md ">
+        <Prising :key="price.title" :title="price.title" :text="price.text" :price="price.price" :description="price.description"/>
+      </template>
+    </div>
+
+    <div class="feedback q-mt-xl ">
+      <div class="info flex justify-around q-pt-xl">
+        <div class="" style="width: 476px">
+          <h2 class="text-weight-bold q-ma-none text-white" style="line-height: 57px">We Have Branches All<br>
+            Over The World
+          </h2>
+          <p class="text-caption text-white q-mt-lg text-weight-light" style="line-height: 20px">The gradual accumulation of information about atomic and
+            small-scale behaviour during the first quarter of the 20th
+            century, which gave some indications about how small things
+            do behave, produced an increasing confusion which was
+            Heisenberg, and Born.</p>
+        </div>
+        <div>
+          <img src="../../src/assets/images/map.png">
+        </div>
+      </div>
+
+      <div class="book flex row justify-center items-center">
+        <div class="lef col-4">
+          <img src="../../src/assets/images/media.png" style="width: 100%">
+        </div>
+        <div class="right col-8">
+
+        </div>
+      </div>
+
+
     </div>
 
   </div>
@@ -46,9 +87,10 @@ import Header from "./Header";
 import UserCard from "./UserCard";
 import QueCard from "./QueCard";
 import Sponsor from "./Sponsor";
+import Prising from "./Prising";
 export default {
   name: "MainBlock",
-  components: {Header, UserCard, QueCard, Sponsor},
+  components: {Header, UserCard, QueCard, Sponsor, Prising},
   data(){
     return{
       cards: [
@@ -104,7 +146,48 @@ export default {
           icon: 'reddit'
         }
       ],
-      text: ''
+      text: '',
+      prising: [
+        {
+          title: 'Car',
+          text: 'Organize across all \n' +
+              'apps by hand',
+          price: 5,
+          description: [
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+          ],
+        },
+        {
+          title: 'Life',
+          text: 'Organize across all \n' +
+              'apps by hand',
+          price: 10,
+          description: [
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+          ],
+        },
+        {
+          title: 'Property',
+          text: 'Organize across all \n' +
+              'apps by hand',
+          price: 8,
+          description: [
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+          ],
+        }
+      ]
     }
   }
 }
@@ -112,11 +195,28 @@ export default {
 
 <style lang="scss" scoped>
   .main-block{
-    padding: 0 200px 50px 200px;
-    background-image: url("../../src/assets/images/background.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 800px;
+    .first{
+      background-image: url("../../src/assets/images/background.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 800px;
+      padding: 0 200px 50px 200px;
+    }
+    .icons{
+      padding: 0 200px 50px 200px;
+    }
+    .book{
+      //padding: 0 200px 50px 200px;
+      background: white;
+      width: 877px;
+    }
+    .pricing{
+      gap: 30px;
+    }
+    .gradient{
+      background-image: linear-gradient(to right, #004788 , #D71489);
+      padding: 30px;
+    }
     .cards{
       margin-top: 200px;
       gap: 30px;
@@ -145,6 +245,14 @@ export default {
   }
   .container{
     margin-top: 130px;
+  }
+  .feedback{
+    position: absolute;
+    background: #252B42;
+    width: 100%;
+    height: 807px;
+    padding: 0 200px 50px 200px;
+
   }
 
 </style>
