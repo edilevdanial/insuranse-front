@@ -38,7 +38,7 @@
 export default {
 
   name: "Book",
-  setup(){
+  data(){
     return{
       type: '',
       text: '',

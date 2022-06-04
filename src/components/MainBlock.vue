@@ -68,7 +68,11 @@
       </div>
 
       <Book/>
+
     </div>
+
+
+    <Footer/>
 
   </div>
 </template>
@@ -80,9 +84,10 @@ import QueCard from "./QueCard";
 import Sponsor from "./Sponsor";
 import Prising from "./Prising";
 import Book from "./Book";
+import Footer from "./Footer";
 export default {
   name: "MainBlock",
-  components: {Book, Header, UserCard, QueCard, Sponsor, Prising},
+  components: {Footer, Book, Header, UserCard, QueCard, Sponsor, Prising},
   data(){
     return{
       cards: [
