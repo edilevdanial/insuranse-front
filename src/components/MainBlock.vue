@@ -30,12 +30,21 @@
     </div>
 
     <div class="flex justify-around q-pl-md q-pr-md cards gradient">
-      <h4 class="text-weight-bold" style="line-height: 32px; margin: 0">Subscribe For Latest<br>
+      <h4 class="text-weight-bold text-white" style="line-height: 32px; margin: 0">Subscribe For Latest<br>
         Newsletter</h4>
       <div class="row">
-        <q-input style="width: 300px" outlined v-model="text" label="text" aria-placeholder="Your Email" />
+        <q-input style="width: 300px" outlined v-model="text" label="Your Email" class="text-white" aria-placeholder="Your Email" />
         <div class="subscribe" style="height: 56px;">Subscribe</div>
       </div>
+    </div>
+
+    <div class="flex justify-center cards items-center  ">
+      <template v-for="price in prising" class="q-pa-md">
+        <Prising :key="price.title" :title="price.title" :text="price.text" :price="price.price" :description="price.description"/>
+      </template>
+    </div>
+
+    <div class="feedback">
     </div>
 
   </div>
@@ -46,9 +55,10 @@ import Header from "./Header";
 import UserCard from "./UserCard";
 import QueCard from "./QueCard";
 import Sponsor from "./Sponsor";
+import Prising from "./Prising";
 export default {
   name: "MainBlock",
-  components: {Header, UserCard, QueCard, Sponsor},
+  components: {Header, UserCard, QueCard, Sponsor, Prising},
   data(){
     return{
       cards: [
@@ -104,7 +114,48 @@ export default {
           icon: 'reddit'
         }
       ],
-      text: ''
+      text: '',
+      prising: [
+        {
+          title: 'Car',
+          text: 'Organize across all \n' +
+              'apps by hand',
+          price: 5,
+          description: [
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+          ],
+        },
+        {
+          title: 'Life',
+          text: 'Organize across all \n' +
+              'apps by hand',
+          price: 10,
+          description: [
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+          ],
+        },
+        {
+          title: 'Property',
+          text: 'Organize across all \n' +
+              'apps by hand',
+          price: 8,
+          description: [
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+            'Unlimited product updates\n',
+          ],
+        }
+      ]
     }
   }
 }
@@ -150,4 +201,11 @@ export default {
     background-image: linear-gradient(to right, #004788 , #D71489);
     padding: 30px;
   }
+  .feedback{
+    position: absolute;
+    background: #9C27B0;
+    width: 100%;
+    height: 807px;
+  }
+
 </style>
