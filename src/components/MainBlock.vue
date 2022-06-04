@@ -44,10 +44,19 @@
       </div>
     </div>
 
-    <div class="flex justify-center q-mt-xl items-center pricing">
-      <template v-for="price in prising" class="q-pa-md ">
-        <Prising :key="price.title" :title="price.title" :text="price.text" :price="price.price" :description="price.description"/>
-      </template>
+    <div class="">
+      <div class="flex items-center column">
+        <h2 class="text-weight-bold q-mb-md">Pricing</h2>
+        <p class="text-weight-light text-caption text-center" style="width: 400px">Problems trying to resolve the conflict between
+          the two major realms of Classical physics: Newtonian mechanics </p>
+      </div>
+
+      <div class="flex justify-center q-mt-xl items-center pricing">
+        <template v-for="price in prising" class="q-pa-md ">
+          <Prising :key="price.title" :title="price.title" :text="price.text" :price="price.price" :description="price.description"/>
+        </template>
+      </div>
+
     </div>
 
     <div class="feedback q-mt-xl ">
@@ -212,27 +221,6 @@ export default {
     .cards{
       margin-top: 200px;
       gap: 30px;
-      .subscribe{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 15px 22px;
-        box-sizing: border-box;
-        background: #23A6F0;
-        border: 1px solid #E6E6E6;
-        border-radius: 0px 5px 5px 0px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 28px;
-        /* identical to box height, or 200% */
-
-        text-align: center;
-        letter-spacing: 0.2px;
-
-        /* light-text-color */
-
-        color: #FFFFFF;
-      }
     }
   }
   .container{
@@ -245,6 +233,27 @@ export default {
     padding: 0 200px 50px 200px;
     margin-bottom: 360px;
 
+  }
+  .subscribe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 22px;
+    box-sizing: border-box;
+    background: #23A6F0;
+    border: 1px solid #E6E6E6;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    /* identical to box height, or 200% */
+
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    /* light-text-color */
+
+    color: #FFFFFF;
   }
 
 </style>
