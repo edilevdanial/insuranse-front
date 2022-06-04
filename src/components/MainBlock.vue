@@ -4,17 +4,12 @@
     <div class="first">
       <Header/>
       <div class="flex column items-center justify-center container">
-        <p class="text-white text-h2 text-weight-bold" style="line-height: 80px">We Ensure A Best <br> Insurance Service
-        </p>
-        <p class="text-white text-h6 text-weight-medium text-center">We know how large objects will act, but things on a
-          <br>
+        <p class="text-white text-h2 text-weight-bold" style="line-height: 80px">We Ensure A Best <br> Insurance Service</p>
+        <p class="text-white text-h6 text-weight-medium text-center">We know how large objects will act, but things on a <br>
           small scale just do not act that way.</p>
         <div class="q-mt-md">
-          <q-btn color="primary" rounded no-caps class="text-weight-bold text-caption q-pa-sm q-mr-md">Get Quote Now
-          </q-btn>
-          <q-btn outline rounded no-caps class="text-weight-bold text-caption q-pa-sm text-white" style="color: white">
-            Learn More
-          </q-btn>
+          <q-btn color="primary" rounded no-caps class="text-weight-bold text-caption q-pa-sm q-mr-md">Get Quote Now</q-btn>
+          <q-btn outline rounded no-caps class="text-weight-bold text-caption q-pa-sm text-white" style="color: white">Learn More</q-btn>
         </div>
       </div>
 
@@ -44,16 +39,14 @@
       <h4 class="text-weight-bold text-white" style="line-height: 32px; margin: 0">Subscribe For Latest<br>
         Newsletter</h4>
       <div class="row">
-        <q-input style="width: 300px" dark outlined v-model="text" label="Your Email" class="text-white"
-                 aria-placeholder="Your Email"/>
+        <q-input style="width: 300px" outlined v-model="text" label="Your Email" class="text-white" aria-placeholder="Your Email" />
         <div class="subscribe" style="height: 56px;">Subscribe</div>
       </div>
     </div>
 
     <div class="flex justify-center q-mt-xl items-center pricing">
       <template v-for="price in prising" class="q-pa-md ">
-        <Prising :key="price.title" :title="price.title" :text="price.text" :price="price.price"
-                 :description="price.description"/>
+        <Prising :key="price.title" :title="price.title" :text="price.text" :price="price.price" :description="price.description"/>
       </template>
     </div>
 
@@ -63,8 +56,7 @@
           <h2 class="text-weight-bold q-ma-none text-white" style="line-height: 57px">We Have Branches All<br>
             Over The World
           </h2>
-          <p class="text-caption text-white q-mt-lg text-weight-light" style="line-height: 20px">The gradual
-            accumulation of information about atomic and
+          <p class="text-caption text-white q-mt-lg text-weight-light" style="line-height: 20px">The gradual accumulation of information about atomic and
             small-scale behaviour during the first quarter of the 20th
             century, which gave some indications about how small things
             do behave, produced an increasing confusion which was
@@ -76,7 +68,11 @@
       </div>
 
       <Book/>
+
     </div>
+
+
+    <Footer/>
 
   </div>
 </template>
@@ -88,12 +84,12 @@ import QueCard from "./QueCard";
 import Sponsor from "./Sponsor";
 import Prising from "./Prising";
 import Book from "./Book";
-
+import Footer from "./Footer";
 export default {
   name: "MainBlock",
-  components: {Book, Header, UserCard, QueCard, Sponsor, Prising},
-  data() {
-    return {
+  components: {Footer, Book, Header, UserCard, QueCard, Sponsor, Prising},
+  data(){
+    return{
       cards: [
         {
           title: 'Peace of Mind',
@@ -108,7 +104,7 @@ export default {
           text: 'the quick fox jumps over the lazy dog'
         }
       ],
-      items: [
+      items:[
         {
           title: 'Peace of Mind',
           text: 'So it really behaves like neither. \n' +
@@ -134,7 +130,7 @@ export default {
         },
         {
           icon: 'lyft'
-        }, {
+        },{
           icon: 'piperHat'
         },
         {
@@ -155,11 +151,11 @@ export default {
               'apps by hand',
           price: 5,
           description: [
-            'Unlimited product updates\n',
-            'Unlimited product updates\n',
-            'Unlimited product updates\n',
-            'Unlimited product updates\n',
-            'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
+              'Unlimited product updates\n',
           ],
         },
         {
@@ -195,66 +191,60 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-block {
-  .first {
-    background-image: url("../../src/assets/images/background.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 800px;
+  .main-block{
+    .first{
+      background-image: url("../../src/assets/images/background.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 800px;
+      padding: 0 200px 50px 200px;
+    }
+    .icons{
+      padding: 0 200px 50px 200px;
+    }
+    .pricing{
+      gap: 30px;
+    }
+    .gradient{
+      background-image: linear-gradient(to right, #004788 , #D71489);
+      padding: 30px;
+    }
+    .cards{
+      margin-top: 200px;
+      gap: 30px;
+      .subscribe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 22px;
+        box-sizing: border-box;
+        background: #23A6F0;
+        border: 1px solid #E6E6E6;
+        border-radius: 0px 5px 5px 0px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        /* identical to box height, or 200% */
+
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        /* light-text-color */
+
+        color: #FFFFFF;
+      }
+    }
+  }
+  .container{
+    margin-top: 130px;
+  }
+  .feedback{
+    background: #252B42;
+    width: 100%;
+    height: 807px;
     padding: 0 200px 50px 200px;
+    margin-bottom: 360px;
+
   }
-
-  .icons {
-    padding: 0 200px 50px 200px;
-  }
-
-  .pricing {
-    gap: 30px;
-  }
-
-  .gradient {
-    background-image: linear-gradient(to right, #004788, #D71489);
-    padding: 30px;
-  }
-
-  .cards {
-    margin-top: 200px;
-    gap: 30px;
-  }
-  .subscribe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 15px 22px;
-    box-sizing: border-box;
-    background: #23A6F0;
-    border: 1px solid #E6E6E6;
-    border-radius: 0px 5px 5px 0px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 28px;
-    /* identical to box height, or 200% */
-
-    text-align: center;
-    letter-spacing: 0.2px;
-
-    /* light-text-color */
-
-    color: #FFFFFF;
-  }
-}
-
-.container {
-  margin-top: 130px;
-}
-
-.feedback {
-  position: absolute;
-  background: #252B42;
-  width: 100%;
-  height: 807px;
-  padding: 0 200px 50px 200px;
-
-}
 
 </style>
