@@ -11,10 +11,7 @@ import BaseIcon from "./Base/BaseIcon";
 export default {
   name: "Sponsor",
   components: {BaseIcon},
-  data(){
-    return{
-    }
-  },
+  data:()=>({}),
   props:{
     icon: {
       type: String,

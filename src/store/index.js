@@ -5,11 +5,24 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        count: 0
+        token:null,
+        profile:null
     },
     mutations: {
-        increment (state) {
-            state.count++
+        setToken:(state,payload)=>{
+            state.token = payload
+        },
+        setProfile:(state,payload)=>{
+            state.profile = payload
+        }
+    },
+    actions:{
+        async registration({commit}, data){
+            console.log(data)
+           await this.$http.post('/registration',data).then(response=>{
+                console.log(response)
+                commit('setToken',response.token)
+            })
         }
     }
 })
