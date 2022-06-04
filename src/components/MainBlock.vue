@@ -32,9 +32,9 @@
     <div class="flex justify-around q-pl-md q-pr-md cards">
       <h3 class="text-weight-bold" style="line-height: 32px; margin: 0">Subscribe For Latest<br>
         Newsletter</h3>
-      <div class="flex" style="width: 450px">
+      <div class="flex">
         <q-input outlined v-model="text" label="text" aria-placeholder="Your Email" />
-        <div style="height: 56px;">Subscribe</div>
+
       </div>
     </div>
 
