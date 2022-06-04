@@ -12,7 +12,7 @@ Vue.use(VueRouter)
 
 
 const routes = [
-    {path: '/', component: Main},
+    {path: '/', component: Main, name: 'auth.login'},
     {path: '/auth/login', component: Login},
     {path: '/auth/registration', component: Registration},
     {path: '/profile', component: Profile}
@@ -26,7 +26,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    return auth({next,})
+    return auth({to, next})
 })
 
 export default router

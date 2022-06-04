@@ -1,13 +1,13 @@
 import Cookies from "js-cookie";
 import store from "../store/index";
 
-export default function ({next}){
-    if (!Cookies.get('token')) {
+export default function ({to, next}) {
+    if (!Cookies.get('token') && to.path !== '/auth/login') {
         return next({
-            name: 'auth.login'
+            path: '/auth/login'
         })
-    }else {
-       store.dispatch('profile')
+    } else if (Cookies.get('token')) {
+        store.dispatch('profile')
     }
 
     return next();

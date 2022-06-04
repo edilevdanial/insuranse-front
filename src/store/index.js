@@ -22,7 +22,7 @@ const store = new Vuex.Store({
         async registration({commit}, user) {
             console.log(user)
             await axios.post('/api/registration', user).then(({data}) => {
-                Cookies.set('token', data.accessToken)
+                Cookies.set('Authorization', data.accessToken)
                 Cookies.set('refreshToken', data.refreshToken)
                 commit('setProfile', data.user)
                 commit('setToken', data.accessToken)
@@ -34,13 +34,14 @@ const store = new Vuex.Store({
                 Cookies.set('refreshToken', data.refreshToken)
                 commit('setProfile', data.user)
                 commit('setToken', data.accessToken)
+                axios.defaults.headers.common = {'Authorization': `Bearer ${data.accessToken}`}
             })
         },
-        async profile(){
+        async profile({commit}) {
             console.log("from vuex")
-            // await axios.post('/api/profile').then(({data}) => {
-            //     commit('setProfile', data.user)
-            // })
+            await axios.get('/api/profile').then(({data}) => {
+                commit('setProfile', data.user)
+            })
         }
     }
 })
