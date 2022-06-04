@@ -10,19 +10,19 @@
         <div class="q-mt-xl q-ml-xl q-mr-xl">
           <div class="q-pb-md">
             <label class=" text-weight-medium text-body1">Name</label>
-            <q-input filled v-model="text" label="Full Name*" class="q-mt-sm"/>
+            <q-input outlined v-model="text" label="Full Name*" class="q-mt-sm"/>
           </div>
           <div class="q-mb-md">
             <label class="text-body1  text-weight-medium">Email</label>
-            <q-input filled v-model="email" label="Email*" class="q-mt-sm"/>
-          </div >
+            <q-input outlined v-model="email" label="Email*" class="q-mt-sm"/>
+          </div>
           <div class="q-mb-md">
             <label class="text-body1 text-weight-medium">Insurance</label>
-            <q-select filled v-model="type" :options="options" label="Please select" class="q-mt-sm"/>
+            <q-select outlined v-model="type" :options="options" label="Please select" class="q-mt-sm" />
           </div>
           <div class="q-mb-md">
             <label class="text-body1  text-weight-medium">Time</label>
-            <q-select filled v-model="timeModel" :options="time" label="Time" class="q-mt-sm" />
+            <q-select outlined v-model="timeModel" :options="time" label="Time" class="q-mt-sm"/>
           </div>
           <div class="q-mt-xl">
             <q-btn label="Book Appointment" type="submit" color="primary" class="full-width q-pa-sm " size="md"/>
@@ -38,8 +38,8 @@
 export default {
 
   name: "Book",
-  setup(){
-    return{
+  data() {
+    return {
       type: '',
       text: '',
       email: '',
@@ -47,15 +47,15 @@ export default {
       options: [
         'Google', 'Facebook', 'Twitter', 'Apple', 'Oracle'
       ],
-      time:[
-          '10AM',
-          '11AM',
-          '12AM',
-          '1PM',
-          '2PM',
-          '3PM',
-          '4PM',
-          '5PM',
+      time: [
+        '10AM',
+        '11AM',
+        '12AM',
+        '1PM',
+        '2PM',
+        '3PM',
+        '4PM',
+        '5PM',
       ]
     }
   }
@@ -63,8 +63,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.book{
+.book {
   background: white;
+  border-radius: 10px;
   width: 950px;
 }
 </style>
