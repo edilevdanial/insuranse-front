@@ -1,15 +1,15 @@
 <template>
-  <q-card class="user-card" flat>
-    <BaseIcon class="q-mb-sm user-group">{{icon}}</BaseIcon>
+  <q-card class="user-card flex justify-center" flat>
+    <BaseIcon class="q-mb-sm user-group text-center">{{icon}}</BaseIcon>
     <h6 class="q-mt-none q-mb-sm">{{title}}</h6>
-    <p class="q-mb-none">{{text}}</p>
+    <p class="q-mb-none text-center">{{text}}</p>
   </q-card>
 </template>
 
 <script>
 import BaseIcon from "./Base/BaseIcon";
 export default {
-  name: "QueCard",
+  name: "advantages",
   components: {BaseIcon},
   props:{
     title:{
@@ -28,9 +28,9 @@ export default {
 
 <style lang="scss" scoped>
 .user-card{
-  max-width: 328px;
+  max-width: 200px;
   width: 100%;
-  padding: 35px 40px;
+  padding: 15px 20px;
   box-sizing: border-box;
   transition: all 0.6s ease;
   .user-group{

@@ -4,6 +4,7 @@ import Main from '../views/index'
 import Login from '../views/auth/login'
 import Registration from '../views/auth/registration'
 import Profile from '../views/profile/index'
+import Details from '../views/details/index'
 
 //Middleware
 import auth from "@/middleware/auth";
@@ -15,7 +16,8 @@ const routes = [
     {path: '/', component: Main, name: 'auth.login'},
     {path: '/auth/login', component: Login},
     {path: '/auth/registration', component: Registration},
-    {path: '/profile', component: Profile}
+    {path: '/profile', component: Profile},
+    {path: '/details', component: Details},
     // { path: '/foo', component: Foo },
     // { path: '/bar', component: Bar }
 ]
