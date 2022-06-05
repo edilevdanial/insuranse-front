@@ -53,7 +53,7 @@
 
       <div class="flex justify-center q-mt-xl items-center pricing">
         <template v-for="price in prising" class="q-pa-md ">
-          <Prising :key="price.title" :title="price.title" :text="price.text" :price="price.price" :description="price.description"/>
+          <Prising :key="price.title" :title="price.title" :text="price.text" :price="price.price" :description="price.description" :to="price.to"/>
         </template>
       </div>
 
@@ -155,6 +155,7 @@ export default {
       text: '',
       prising: [
         {
+          to: '/car',
           title: 'Car',
           text: 'Organize across all \n' +
               'apps by hand',
@@ -168,6 +169,7 @@ export default {
           ],
         },
         {
+          to: '/life',
           title: 'Life',
           text: 'Organize across all \n' +
               'apps by hand',
@@ -181,6 +183,7 @@ export default {
           ],
         },
         {
+          to: '/property',
           title: 'Property',
           text: 'Organize across all \n' +
               'apps by hand',
