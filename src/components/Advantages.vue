@@ -1,6 +1,6 @@
 <template>
   <q-card class="user-card flex justify-center" flat>
-    <BaseIcon class="q-mb-sm user-group text-center">{{icon}}</BaseIcon>
+    <BaseIcon class="q-mb-sm user-group text-center ic-25">{{icon}}</BaseIcon>
     <h6 class="q-mt-none q-mb-sm">{{title}}</h6>
     <p class="q-mb-none text-center">{{text}}</p>
   </q-card>

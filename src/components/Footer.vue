@@ -119,6 +119,6 @@ export default {
 <style lang="scss" scoped>
   .footer{
     padding: 0 200px 50px 200px;
-    margin-top: 500px;
+    margin-top: 50px;
   }
 </style>

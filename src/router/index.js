@@ -4,10 +4,11 @@ import Main from '../views/index'
 import Login from '../views/auth/login'
 import Registration from '../views/auth/registration'
 import Profile from '../views/profile/index'
-import Details from '../views/details/index'
-
+import Property from '../views/details/Property'
+import Car from "../views/details/Car";
 //Middleware
 import auth from "@/middleware/auth";
+
 
 Vue.use(VueRouter)
 
@@ -17,7 +18,8 @@ const routes = [
     {path: '/auth/login', component: Login},
     {path: '/auth/registration', component: Registration},
     {path: '/profile', component: Profile},
-    {path: '/details', component: Details},
+    {path: '/property', component: Property},
+    {path: '/car', component: Car},
     // { path: '/foo', component: Foo },
     // { path: '/bar', component: Bar }
 ]

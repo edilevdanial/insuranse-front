@@ -1,9 +1,11 @@
 <template>
   <div class="flex justify-center q-mt-xl">
     <div class="book flex row">
+
       <div class="lef col-4">
         <img src="../../src/assets/images/media.png" style="width: 100%">
       </div>
+
       <div class="right col-8">
         <h3 class="text-weight-bold text-center">Book Appointment</h3>
 
