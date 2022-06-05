@@ -1,18 +1,10 @@
 <template>
   <div class="q-mx-lg q-py-lg row">
-    <div class="col-4">
+    <div class="col-3">
       <ProfileCard></ProfileCard>
     </div>
-    <div class="col-8">
-      <q-tabs
-          v-model="tab"
-          class="q-mb-xl text-teal"
-      >
-        <q-tab name="mails" icon="mail" label="Mails"/>
-        <q-tab name="alarms" icon="alarm" label="Alarms"/>
-        <q-tab name="movies" icon="movie" label="Movies"/>
-      </q-tabs>
-
+    <div class="col-9">
+      <UserOrders></UserOrders>
     </div>
   </div>
 
@@ -20,13 +12,44 @@
 
 <script>
 import ProfileCard from "@/components/ProfileCard";
+import UserOrders from "@/components/userOrders";
 
 export default {
   name: "index",
-  components: {ProfileCard},
+  components: {UserOrders, ProfileCard},
   data: () => ({
-    tab: 'mails'
-  })
+    tabs: [
+      {
+        id: 0,
+        title: 'Мои заказы',
+        to: '/userOrders',
+      }, {
+        id: 1,
+        title: 'Заказы под реализацию',
+        to: '/ordersRealization'
+      }, {
+        id: 2,
+        title: 'Способы оплаты',
+        to: '/payMethods'
+      }, {
+        id: 3,
+        title: 'Адреса доставки',
+        to: '/addressDelivery'
+      }, {
+        id: 4,
+        title: 'Персонал',
+        to: '/personal'
+      },
+    ],
+    tab: 'mails',
+    showSettings: true,
+    tabsIndex: 0,
+  }),
+  methods: {
+    toProduct(i) {
+      this.$router.push({name: "orderDetails", params: {id: i}});
+    },
+  },
 }
 </script>
 
