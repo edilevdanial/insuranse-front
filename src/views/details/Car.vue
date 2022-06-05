@@ -45,9 +45,26 @@
       </div>
     </div>
 
-    <div class="create">
-      <CreateProperty class="wrapper"/>
+    <div class="advantages">
+
+      <div class="wrapper">
+        <h4 class="text-weight-bold text-center q-mt-xl">Наши преимущества</h4>
+
+        <div class="flex cards justify-around">
+          <template v-for="item in options">
+            <Advantages :key="item.text" :icon="item.icon" :text="item.text"/>
+          </template>
+        </div>
+
+      </div>
+
     </div>
+
+    <div class="create">
+      <CreateCar class="wrapper"/>
+    </div>
+
+
 
     <Footer/>
 
@@ -57,13 +74,41 @@
 <script>
 import Header from "../../components/Header";
 import Advantages from "../../components/Advantages";
-import CreateProperty from "../../components/CreateForms/CreateProperty";
 import Footer from "../../components/Footer";
+import CreateCar from "../../components/CreateForms/CreateCar";
+
 export default {
   name: "Car",
-  components: {Footer, CreateProperty, Advantages, Header},
+  components: {CreateCar, Footer, Advantages, Header},
+
   data(){
     return{
+      options: [
+        {
+          icon: 'comp',
+          text: 'Без отделений и очередей'
+        },
+        {
+          icon: 'calendar',
+          text: 'Помесячная оплата КАСКО'
+        },
+        {
+          icon: 'shild',
+          text: 'Полное покрытие всех рисков'
+        },
+        {
+          icon: 'done',
+          text: 'Удобные тарифы – вы сами выбираете интересующие вас опции'
+        },
+        {
+          icon: 'umbrella',
+          text: 'Защита автомобиля во всех странах СНГ'
+        },
+        {
+          icon: 'time',
+          text: 'Рекордно быстрые и удобные страховые выплаты'
+        },
+      ],
       items: [
         {
           icon: 'dtp',
@@ -130,7 +175,7 @@ export default {
   gap: 30px;
 }
 .trust{
-  background-image: url("https://www.nsk.kz/media/products/i3/1481561068hkakp.jpg");
+  background-image: url("https://www.nsk.kz/media/products/jp/1544517036vyadw.png");
   background-repeat: no-repeat;
   position: relative;
   background-size: 100%;

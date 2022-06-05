@@ -6,6 +6,7 @@ import Registration from '../views/auth/registration'
 import Profile from '../views/profile/index'
 import Property from '../views/details/Property'
 import Car from "../views/details/Car";
+import Life from '../views/details/Life'
 //Middleware
 import auth from "@/middleware/auth";
 
@@ -20,6 +21,7 @@ const routes = [
     {path: '/profile', component: Profile},
     {path: '/property', component: Property},
     {path: '/car', component: Car},
+    {path: '/life', component: Life},
     // { path: '/foo', component: Foo },
     // { path: '/bar', component: Bar }
 ]

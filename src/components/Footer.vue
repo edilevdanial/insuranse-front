@@ -17,16 +17,16 @@
           <h5 class="text-weight-bold q-mt-none q-mb-md">Company Info</h5>
           <ul class="q-pl-none q-mt-none">
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">About Us</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">About Us</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">About Us</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">About Us</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">About Us</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">About Us</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">About Us</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">About Us</a>
             </li>
           </ul>
         </div>
@@ -35,16 +35,16 @@
           <h5 class="text-weight-bold q-mt-none q-mb-md">Legal</h5>
           <ul class="q-pl-none q-mt-none">
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">About Us</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">About Us</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">About Us</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">About Us</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">About Us</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">About Us</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">About Us</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">About Us</a>
             </li>
           </ul>
         </div>
@@ -53,16 +53,16 @@
           <h5 class="text-weight-bold q-mt-none q-mb-md">Features</h5>
           <ul class="q-pl-none q-mt-none">
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">Business Marketing</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">Business Marketing</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">User Analytic</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">User Analytic</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">Live Chat</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">Live Chat</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">Unlimited Support</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">Unlimited Support</a>
             </li>
           </ul>
         </div>
@@ -71,16 +71,16 @@
           <h5 class="text-weight-bold q-mt-none q-mb-md">Resources</h5>
           <ul class="q-pl-none q-mt-none">
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">IOS & Android</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">IOS & Android</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">Watch a Demo</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">Watch a Demo</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">Customers</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">Customers</a>
             </li>
             <li style="list-style: none" class="q-mb-sm">
-              <a href="#" class="text-weight-light text-caption q-mb-sm" style="text-decoration: none">API</a>
+              <a href="#" class="text-weight-light text-caption q-mb-sm text-black" style="text-decoration: none">API</a>
             </li>
           </ul>
         </div>
