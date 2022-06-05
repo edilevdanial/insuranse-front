@@ -13,10 +13,9 @@
 export default {
   name: 'LayoutDefault',
 
-  components: {
-  },
+  components: {},
 
-  data () {
+  data() {
     return {
       leftDrawerOpen: false
     }

@@ -10,6 +10,9 @@ const store = new Vuex.Store({
         token: null,
         profile: null
     },
+    getters: {
+        getProfile: (state) => state.profile
+    },
     mutations: {
         setToken: (state, payload) => {
             state.token = payload
@@ -22,28 +25,31 @@ const store = new Vuex.Store({
         async registration({commit}, user) {
             console.log(user)
             await axios.post('/api/registration', user).then(({data}) => {
-                Cookies.set('Authorization', data.accessToken)
-                Cookies.set('refreshToken', data.refreshToken)
+                Cookies.set('token', data.accessToken)
+                Cookies.set('token', data.refreshToken)
                 commit('setProfile', data.user)
                 commit('setToken', data.accessToken)
             })
         },
-        async login({commit}, user) {
+        async login({commit}, {user, callback}) {
             await axios.post('/api/login', user).then(({data}) => {
                 Cookies.set('token', data.accessToken)
                 Cookies.set('refreshToken', data.refreshToken)
                 commit('setProfile', data.user)
                 commit('setToken', data.accessToken)
                 axios.defaults.headers.common = {'Authorization': `Bearer ${data.accessToken}`}
+                callback()
+            }).catch(e => {
+                console.log(e)
             })
         },
         async profile({commit}) {
-            console.log("from vuex")
             await axios.get('/api/profile').then(({data}) => {
-                commit('setProfile', data.user)
+                commit('setProfile', data)
+                commit('setToken', Cookies.get('token'))
             })
         }
-    }
+    },
 })
 
 export default store

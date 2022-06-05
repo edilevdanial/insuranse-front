@@ -11,7 +11,8 @@
         <q-btn flat no-caps label="Forgot your password?" text-color="purple"></q-btn>
       </div>
     </q-card>
-    <q-btn to="registration" label="Don't have an account ?" flat no-caps><span class="text-accent">Sign up</span></q-btn>
+    <q-btn to="registration" label="Don't have an account ?" flat no-caps><span class="text-accent">Sign up</span>
+    </q-btn>
   </div>
 </template>
 
@@ -32,7 +33,11 @@ export default {
     }),
     authUser() {
       console.log('yes')
-      this.login(this.user)
+      this.login({
+        user: this.user, callback: () => {
+          this.$router.push('/')
+        }
+      })
     }
   }
 }
