@@ -48,6 +48,12 @@ const store = new Vuex.Store({
                 commit('setProfile', data)
                 commit('setToken', Cookies.get('token'))
             })
+        },
+        async car({state},car){
+            car.userId = state.profile.id
+            await axios.post('/api/car', car).then(({data})=>{
+                console.log(data)
+            })
         }
     },
 })
