@@ -8,13 +8,16 @@
     </div>
     <div class="profile-card__info">
       <img src="@/assets/images/AvaBg.svg" alt="ava"/>
-      <h1 class="profile-card__info-name">Земский Андрей</h1>
+      <h1 class="profile-card__info-name">{{ profile.name }}</h1>
       <hr class="profile-card__info-line"/>
       <p class="profile-card__info-number">
-        Телефон: <strong>+7 (707) 421-56-22</strong>
+        Телефон: <strong>
+        {{ profile.number }}
+      </strong>
       </p>
+      <!--      +7 (707) 421-56-22-->
       <p class="profile-card__info-email">
-        Email: <strong>example@gmail.com</strong>
+        Email: <strong>{{ profile.email }}</strong>
       </p>
     </div>
   </div>
@@ -22,14 +25,20 @@
 
 <script>
 import BaseIcon from "@/components/Base/BaseIcon";
+import {mapGetters} from "vuex";
 
 export default {
   name: "ProfileCard",
   components: {BaseIcon},
   data: () => ({
-
     showSettings: false
-  })
+  }),
+  computed: {
+    ...mapGetters({
+      profile: 'getProfile'
+    }),
+
+  }
 };
 </script>
 
