@@ -25,7 +25,7 @@
 
         <div class="flex cards justify-around">
           <template v-for="item in items">
-            <Advantages :key="item.text" :icon="item.icon" :text="item.text"/>
+            <Advantages is-car :key="item.text" :icon="item.icon" :text="item.text"/>
           </template>
         </div>
 
