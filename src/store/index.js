@@ -54,6 +54,18 @@ const store = new Vuex.Store({
             await axios.post('/api/car', car).then(({data})=>{
                 console.log(data)
             })
+        },
+        async property({state}, property){
+            property.userId = state.profile.id
+            await axios.post('/api/property', property).then(({data})=>{
+                console.log(data)
+            })
+        },
+        async life({state}, life){
+            life.userId = state.profile.id
+            await axios.post('/api/life', life).then(({data})=> {
+                console.log(data)
+            })
         }
     },
 })

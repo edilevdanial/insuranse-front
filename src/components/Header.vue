@@ -7,16 +7,19 @@
       <nav>
         <ul class="nav">
           <li class="nav-bar">
-            <a href="#" class="nav-link text-weight-medium">Home</a>
+            <router-link to="/" class="nav-link text-weight-medium">Home</router-link>
           </li>
           <li class="nav-bar">
-            <a href="#" class="nav-link text-weight-medium">Product</a>
+            <router-link to="/car" class="nav-link text-weight-medium">Car</router-link>
           </li>
           <li class="nav-bar">
-            <a href="#" class="nav-link text-weight-medium">Pricing</a>
+            <router-link to="/life" class="nav-link text-weight-medium">Life</router-link>
           </li>
           <li class="nav-bar">
-            <a href="#" class="nav-link text-weight-medium">Contact</a>
+            <router-link to="/property" class="nav-link text-weight-medium">Property</router-link>
+          </li>
+          <li class="nav-bar">
+            <a href="#footer" class="nav-link text-weight-medium">Contact</a>
           </li>
         </ul>
       </nav>

@@ -11,7 +11,10 @@
         {{ desc }}
       </li>
     </ul>
-    <q-btn color="primary" class="full-width q-pa-sm " size="sm" unelevated>Details</q-btn>
+    <router-link :to="to" class="full-width" style="text-decoration: none" >
+      <q-btn color="primary" class="full-width q-pa-sm " size="sm" unelevated >Details</q-btn>
+    </router-link>
+
   </q-card>
 </template>
 
@@ -22,6 +25,10 @@ export default {
   name: "Prising",
   components: {BaseIcon},
   props: {
+    to:{
+      type: String,
+      required: true
+    },
     title: {
       type: String,
       required: true

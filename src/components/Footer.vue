@@ -1,5 +1,5 @@
 <template>
-    <div class="footer q-pt-xl">
+    <div class="footer q-pt-xl" id="footer">
 
       <div class="flex justify-between">
           <div>
@@ -120,5 +120,8 @@ export default {
   .footer{
     padding: 0 200px 50px 200px;
     margin-top: 50px;
+  }
+  #footer{
+
   }
 </style>
