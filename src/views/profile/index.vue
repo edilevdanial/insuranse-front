@@ -4,7 +4,7 @@
       <ProfileCard></ProfileCard>
     </div>
     <div class="col-9">
-      <UserOrders></UserOrders>
+      <UserOrders :insurance-list="insurances"></UserOrders>
     </div>
   </div>
 
@@ -13,6 +13,7 @@
 <script>
 import ProfileCard from "@/components/ProfileCard";
 import UserOrders from "@/components/userOrders";
+import {mapActions, mapGetters} from "vuex";
 
 export default {
   name: "index",
@@ -45,11 +46,22 @@ export default {
     showSettings: true,
     tabsIndex: 0,
   }),
+  mounted() {
+    this.allInsurances()
+  },
   methods: {
+    ...mapActions({
+      allInsurances: 'allInsurance'
+    }),
     toProduct(i) {
       this.$router.push({name: "orderDetails", params: {id: i}});
     },
   },
+  computed: {
+    ...mapGetters({
+      insurances: 'getInsurances'
+    })
+  }
 }
 </script>
 

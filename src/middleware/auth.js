@@ -6,7 +6,7 @@ export default function ({to, next}) {
         return next({
             path: '/auth/login'
         })
-    } else if (Cookies.get('token')) {
+    } else if (Cookies.get('token') && Object.keys(store.getters.getProfile).length === 0) {
         store.dispatch('profile')
     }
 

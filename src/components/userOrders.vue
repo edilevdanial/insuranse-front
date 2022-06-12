@@ -4,15 +4,25 @@
       <h1 class="order-container__header-title">История страховок</h1>
     </div>
     <div class="order-container__body">
-      <div v-for="i in 2" :key="i" class="order-container__body__history">
-        <h1 class="order-container__body__history-title">
-          Декабрь 2021
-        </h1>
+      <div class="order-container__body__history" v-if="insuranceList.length >= 1">
+        <!--        <h1 class="order-container__body__history-title">-->
+        <!--          Декабрь 2021-->
+        <!--        </h1>-->
         <OrderHistoryItem
-            v-for="i in 4"
-            :key="i"
-            @click.native="toProduct(i)"
+            :type-house="insurance.type"
+            :iin="insurance.IIN"
+            :period="insurance.period"
+            :year="insurance.year"
+            :type="insurance.name"
+            :year-of-release="insurance.yearOfRelease"
+            :insurance-count="1"
+            :price-of-car="insurance.priceOfCar"
+            :sale="insurance.price"
+            v-for="insurance in insuranceList" :key="insurance.id"
         />
+      </div>
+      <div class="flex items-center justify-center" v-else>
+        <h4>У вас пока ещё нет старховки</h4>
       </div>
     </div>
   </div>
@@ -23,6 +33,12 @@ import OrderHistoryItem from "@/components/OrderHistoryItem";
 
 export default {
   name: "userOrders",
+  props: {
+    insuranceList: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
     OrderHistoryItem,
   },

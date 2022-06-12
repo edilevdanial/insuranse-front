@@ -8,10 +8,12 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         token: null,
-        profile: null
+        profile: {},
+        insurances: []
     },
     getters: {
-        getProfile: (state) => state.profile
+        getProfile: (state) => state.profile,
+        getInsurances: (state) => state.insurances
     },
     mutations: {
         setToken: (state, payload) => {
@@ -19,6 +21,9 @@ const store = new Vuex.Store({
         },
         setProfile: (state, payload) => {
             state.profile = payload
+        },
+        setInsurances: (state, payload) => {
+            state.insurances = payload
         }
     },
     actions: {
@@ -49,22 +54,27 @@ const store = new Vuex.Store({
                 commit('setToken', Cookies.get('token'))
             })
         },
-        async car({state},car){
-            car.userId = state.profile.id
-            await axios.post('/api/car', car).then(({data})=>{
+        async car({getters}, car) {
+            car.userId = getters.getProfile.id
+            await axios.post('/api/car', car).then(({data}) => {
                 console.log(data)
             })
         },
-        async property({state}, property){
-            property.userId = state.profile.id
-            await axios.post('/api/property', property).then(({data})=>{
+        async property({getters}, property) {
+            property.userId = getters.getProfile.id
+            await axios.post('/api/property', property).then(({data}) => {
                 console.log(data)
             })
         },
-        async life({state}, life){
-            life.userId = state.profile.id
-            await axios.post('/api/life', life).then(({data})=> {
+        async life({getters}, life) {
+            life.userId = getters.getProfile.id
+            await axios.post('/api/life', life).then(({data}) => {
                 console.log(data)
+            })
+        },
+        async allInsurance({commit}) {
+            await axios.get('/api/insurances').then(({data}) => {
+                commit('setInsurances', data)
             })
         }
     },
