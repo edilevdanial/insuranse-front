@@ -4,12 +4,11 @@
     <div class="first">
       <Header/>
       <div class="flex column items-center justify-center container">
-        <p class="text-white text-h2 text-weight-bold" style="line-height: 80px">We Ensure A Best <br> Insurance Service</p>
-        <p class="text-white text-h6 text-weight-medium text-center">We know how large objects will act, but things on a <br>
-          small scale just do not act that way.</p>
+        <p class="text-white text-h2 text-weight-bold" style="line-height: 80px">Мы обеспечиваем наилучшее <br>страховое обслуживание</p>
+        <p class="text-white text-h6 text-weight-medium text-center">Мы знаем, как будут действовать большие объекты, но вещи <br> в малом масштабе просто не действуют таким образом.</p>
         <div class="q-mt-md">
           <q-btn color="primary" rounded no-caps class="text-weight-bold text-caption q-pa-sm q-mr-md">Get Quote Now</q-btn>
-          <q-btn outline rounded no-caps class="text-weight-bold text-caption q-pa-sm text-white" style="color: white">Learn More</q-btn>
+          <q-btn outline rounded no-caps class="text-weight-bold text-caption q-pa-sm text-white" style="color: white">Подробнее узнать</q-btn>
         </div>
       </div>
 
@@ -23,7 +22,7 @@
     </div>
 
 
-    <div class="flex cards justify-center">
+    <div class="flex cards-que justify-center">
       <template v-for="item in items">
         <QueCard :key="item.title" :icon="item.icon" :text="item.text" :title="item.title"/>
       </template>
@@ -36,17 +35,17 @@
     </div>
 
     <div class="flex justify-around q-pl-md q-pr-md q-mt-xl gradient">
-      <h4 class="text-weight-bold text-white" style="line-height: 32px; margin: 0">Subscribe For Latest<br>
-        Newsletter</h4>
+      <h4 class="text-weight-bold text-white" style="line-height: 32px; margin: 0">Подпишитесь на последние новости<br>
+        новостная рассылка</h4>
       <div class="row">
-        <q-input style="width: 300px" outlined v-model="text" label="Your Email" class="text-white" aria-placeholder="Your Email" />
+        <q-input dark style="width: 300px" outlined v-model="text" label="Your Email" class="text-white" aria-placeholder="Your Email" />
         <div class="subscribe" style="height: 56px;">Subscribe</div>
       </div>
     </div>
 
     <div class="">
       <div class="flex items-center column">
-        <h2 class="text-weight-bold q-mb-md">Pricing</h2>
+        <h2 class="text-weight-bold q-mb-md">Расценка</h2>
         <p class="text-weight-light text-caption text-center" style="width: 400px">Problems trying to resolve the conflict between
           the two major realms of Classical physics: Newtonian mechanics </p>
       </div>
@@ -101,15 +100,15 @@ export default {
     return{
       cards: [
         {
-          title: 'Peace of Mind',
+          title: 'Душевное спокойствие',
           text: 'the quick fox jumps over the lazy dog'
         },
         {
-          title: 'Set For Life',
+          title: 'Набор На Всю Жизнь',
           text: 'the quick fox jumps over the lazy dog'
         },
         {
-          title: '100% Satisfaction',
+          title: '100% Удовлетворение',
           text: 'the quick fox jumps over the lazy dog'
         }
       ],
@@ -156,7 +155,7 @@ export default {
       prising: [
         {
           to: '/car',
-          title: 'Car',
+          title: 'Машина',
           text: 'Organize across all \n' +
               'apps by hand',
           price: 5,
@@ -170,7 +169,7 @@ export default {
         },
         {
           to: '/life',
-          title: 'Life',
+          title: 'Жизнь',
           text: 'Organize across all \n' +
               'apps by hand',
           price: 10,
@@ -184,7 +183,7 @@ export default {
         },
         {
           to: '/property',
-          title: 'Property',
+          title: 'Жилье',
           text: 'Organize across all \n' +
               'apps by hand',
           price: 8,
@@ -259,4 +258,7 @@ export default {
     color: #FFFFFF;
   }
 
+  .cards-que{
+    margin-top: 350px;
+  }
 </style>
