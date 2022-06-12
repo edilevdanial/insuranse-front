@@ -4,7 +4,7 @@
     <div class="first">
       <Header/>
       <div class="flex column items-center justify-center container">
-        <p class="text-white text-h2 text-weight-bold" style="line-height: 80px">Мы обеспечиваем наилучшее <br>страховое обслуживание</p>
+        <p class="text-white text-h2 text-center text-weight-bold" style="line-height: 80px">Мы обеспечиваем наилучшее <br>страховое обслуживание</p>
         <p class="text-white text-h6 text-weight-medium text-center">Мы знаем, как будут действовать большие объекты, но вещи <br> в малом масштабе просто не действуют таким образом.</p>
         <div class="q-mt-md">
           <q-btn color="primary" rounded no-caps class="text-weight-bold text-caption q-pa-sm q-mr-md">Get Quote Now</q-btn>
