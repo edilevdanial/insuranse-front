@@ -54,10 +54,11 @@ const store = new Vuex.Store({
                 commit('setToken', Cookies.get('token'))
             })
         },
-        async car({getters}, car) {
+        async car({getters}, {car, callback}) {
             car.userId = getters.getProfile.id
             await axios.post('/api/car', car).then(({data}) => {
                 console.log(data)
+                callback()
             })
         },
         async property({getters}, property) {

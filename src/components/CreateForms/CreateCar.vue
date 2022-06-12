@@ -16,6 +16,7 @@
         </div>
 
         <div class="q-mt-md">
+          <q-banner class="bg-green bannerr text-center q-mb-md text-white" v-if="isFinish">Вы успешно застроховались!</q-banner>
           <q-btn @click="setCar" label="Book Appointment" type="submit" color="primary" class="full-width q-pa-sm " size="md"/>
         </div>
 
@@ -42,7 +43,10 @@ export default {
     }),
 
     setCar(){
-      this.car(this.carData)
+      this.car({car: this.carData, callback: ()=>{
+        this.isFinish = true
+        } } )
+
     }
   },
 
@@ -51,8 +55,9 @@ export default {
     carData: {
       priceOfCar: '',
       yearOfRelease: '',
-      userId: null
-    }
+      userId: null,
+    },
+      isFinish: false
     }
   },
   mounted() {
@@ -64,6 +69,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped  lang="scss">
+.bannerr{
+  border-radius: 15px;
+}
 </style>

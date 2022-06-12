@@ -16,6 +16,7 @@
         </div>
 
         <div class="q-mt-md">
+          <q-banner class="bg-green bannerr text-center q-mb-md text-white" v-if="isFinish">Вы успешно застроховались!</q-banner>
           <q-btn label="Book Appointment" @click="setLife" type="submit" color="primary" class="full-width q-pa-sm " size="md"/>
         </div>
 
