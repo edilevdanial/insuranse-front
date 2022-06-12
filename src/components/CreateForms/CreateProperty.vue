@@ -21,6 +21,7 @@
         </div>
 
         <div class="q-mt-md">
+          <q-banner class="bg-green bannerr text-center q-mb-md text-white" v-if="isFinish">Вы успешно застроховались!</q-banner>
           <q-btn @click="setProperty" label="Book Appointment" type="submit" color="primary" class="full-width q-pa-sm " size="md"/>
         </div>
 
@@ -46,11 +47,14 @@ export default {
       property: 'property'
     }),
     setProperty(){
-      this.property(this.PropertyData)
+      this.property({property:this.PropertyData,callback:()=>{
+          this.isFinish = true
+        }})
     }
   },
   data(){
     return{
+      isFinish:false,
       PropertyData:{
         type: '',
         price: '',
@@ -76,7 +80,8 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
+<style scoped  lang="scss">
+.bannerr{
+  border-radius: 15px;
+}
 </style>

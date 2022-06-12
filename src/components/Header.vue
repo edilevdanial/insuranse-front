@@ -7,19 +7,19 @@
       <nav>
         <ul class="nav">
           <li class="nav-bar">
-            <router-link to="/" class="nav-link text-weight-medium">Home</router-link>
+            <router-link to="/" class="nav-link text-weight-medium">Главная</router-link>
           </li>
           <li class="nav-bar">
-            <router-link to="/car" class="nav-link text-weight-medium">Car</router-link>
+            <router-link to="/car" class="nav-link text-weight-medium">Машина</router-link>
           </li>
           <li class="nav-bar">
-            <router-link to="/life" class="nav-link text-weight-medium">Life</router-link>
+            <router-link to="/life" class="nav-link text-weight-medium">Страхование жизни</router-link>
           </li>
           <li class="nav-bar">
-            <router-link to="/property" class="nav-link text-weight-medium">Property</router-link>
+            <router-link to="/property" class="nav-link text-weight-medium">Жилье</router-link>
           </li>
           <li class="nav-bar">
-            <a href="#footer" class="nav-link text-weight-medium">Contact</a>
+            <a href="#footer" class="nav-link text-weight-medium">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -32,7 +32,7 @@
           profile.name
         }}
       </router-link>
-      <q-btn color="primary">Become a member
+      <q-btn to="/auth/registration" color="primary">Стать участником
         <base-icon class="ic-12 q-ml-md">arrow</base-icon>
       </q-btn>
     </div>

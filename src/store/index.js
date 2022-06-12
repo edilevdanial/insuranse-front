@@ -54,22 +54,25 @@ const store = new Vuex.Store({
                 commit('setToken', Cookies.get('token'))
             })
         },
-        async car({getters}, car) {
+        async car({getters}, {car, callback}) {
             car.userId = getters.getProfile.id
             await axios.post('/api/car', car).then(({data}) => {
                 console.log(data)
+                callback()
             })
         },
-        async property({getters}, property) {
+        async property({getters}, {property,callback}) {
             property.userId = getters.getProfile.id
             await axios.post('/api/property', property).then(({data}) => {
                 console.log(data)
+                callback()
             })
         },
-        async life({getters}, life) {
+        async life({getters}, {life,callback}) {
             life.userId = getters.getProfile.id
             await axios.post('/api/life', life).then(({data}) => {
                 console.log(data)
+                callback()
             })
         },
         async allInsurance({commit}) {
